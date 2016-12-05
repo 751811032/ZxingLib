@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Copyright (C) 2014 ZXing authors
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+      http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+
+<resources>
+  <string name="app_name">金星娱乐</string>
+  <string name="action_settings">Settings</string>
+  <string name="app_picker_name">應用程式</string>
+  <string name="button_ok">確定</string>
+  <string name="msg_intent_failed">抱歉，無法打開所需軟體，條碼內容可能不符規格。</string>
+  <string name="msg_camera_framework_bug">很抱歉，Android 相機出現問題，您可能需要重新啟動您的裝置。</string>
+
+  <string name="msg_default_status">將條碼置於鏡頭範圍內以進行掃描。</string>
+  <string name="msg_sbc_results">結果</string>
+  <string name="msg_sure">您確定嗎？</string>
+  <string name="msg_unmount_usb">無法讀取 SD 卡。</string>
+    <string name="preferences_actions_title">找到條碼時\u2026</string>
+    <string name="preferences_auto_focus_title">使用自動對焦</string>
+    <string name="preferences_auto_open_web_title">自動打開網頁</string>
+    <string name="preferences_bulk_mode_summary">連續掃描並儲存多個條碼</string>
+    <string name="preferences_bulk_mode_title">大量掃描模式</string>
+    <string name="preferences_copy_to_clipboard_title">複製到剪貼簿</string>
+    <string name="preferences_custom_product_search_summary" formatted="false">替換：％s=內容，％f=格式，％t=類型</string>
+    <string name="preferences_custom_product_search_title">自訂搜尋網址</string>
+    <string name="preferences_decode_1D_industrial_title">一維工業條碼</string>
+    <string name="preferences_decode_1D_product_title">一維產品條碼</string>
+    <string name="preferences_decode_Aztec_title">Aztec 條碼</string>
+    <string name="preferences_decode_Data_Matrix_title">Data Matrix 條碼</string>
+    <string name="preferences_decode_PDF417_title">PDF417 條碼（β）</string>
+    <string name="preferences_decode_QR_title">QR Code</string>
+    <string name="preferences_device_bug_workarounds_title">迴避設備問題</string>
+    <string name="preferences_disable_barcode_scene_mode_title">取消條碼場景模式</string>
+    <string name="preferences_disable_continuous_focus_summary">只使用標準對焦模式</string>
+    <string name="preferences_disable_continuous_focus_title">取消連續對焦</string>
+    <string name="preferences_disable_exposure_title">取消曝光</string>
+    <string name="preferences_disable_metering_title">取消測光</string>
+    <string name="preferences_front_light_auto">自動</string>
+    <string name="preferences_front_light_off">關</string>
+    <string name="preferences_front_light_on">開</string>
+    <string name="preferences_front_light_summary">改善在低光源的環境下掃描的成功率，但有可能造成過度曝光的現象</string>
+    <string name="preferences_front_light_title">使用前光源</string>
+    <string name="preferences_general_title">一般設定</string>
+    <string name="preferences_history_summary">存儲在歷史的掃描</string>
+    <string name="preferences_history_title">加入歷史</string>
+    <string name="preferences_invert_scan_summary">掃描黑底白字的條碼（某些設備上無法使用）</string>
+    <string name="preferences_invert_scan_title">黑底白字掃描</string>
+    <string name="preferences_name">設定</string>
+    <string name="preferences_orientation_title">沒有自動旋轉</string>
+    <string name="preferences_play_beep_title">嗶一聲</string>
+    <string name="preferences_remember_duplicates_summary">在記錄中重複儲存相同的條碼</string>
+    <string name="preferences_remember_duplicates_title">記錄重複的條碼</string>
+    <string name="preferences_result_title">結果設定</string>
+    <string name="preferences_scanning_title">當掃描條碼時，解碼\u2026</string>
+    <string name="preferences_search_country">搜尋國家</string>
+    <string name="preferences_supplemental_summary">嘗試透過條碼搜尋更多的資訊</string>
+    <string name="preferences_supplemental_title">搜尋更多資訊</string>
+    <string name="preferences_vibrate_title">震動</string>
+  <string name="prompt_we_need_camera">我們需要您提供相關權限以使我們能夠更好的為您服務.</string>
+  <string name="prompt_request_camara">我們即將請求相機相關的權限.是否前往請求?</string>
+  <string name="prompt_already_get_permission">已獲得相機權限</string>
+  <string name="prompt_been_denied">已被拒絕獲取權限,不能進行掃碼</string>
+
+  <string name="prompt_request_file">我們即將請求文件讀寫的權限權限.是否前往請求?</string>
+  <string name="prompt_already_get_file_permission">已獲得文件讀寫權限</string>
+  <string name="prompt_file_been_denied">已被拒絕獲取權限,不能進行下載</string>
+
+  <string name="prompt_request_phone">我們即將請求訪問電話的權限.是否前往請求?</string>
+  <string name="prompt_phone_denied">已被拒絕獲取撥號權限,不能進行撥號</string>
+
+    <string name="app_update">軟件更新</string>
+    <string name="new_version">發現新版本</string>
+    <string name="update">更新</string>
+    <string name="loading">加載中</string>
+
+    <string name="cancel">取消</string>
+
+    <string name="downloading">下載中</string>
+</resources>
