@@ -134,6 +134,7 @@ final class CameraConfigurationManager {
 			int screenHeight = display.getHeight();
 			screenResolution = new Point(screenWidth, screenHeight);
 		}
+
 		Log.i(TAG, "Screen resolution in current orientation: " + screenResolution);
 		cameraResolution = CameraConfigurationUtils.findBestPreviewSizeValue(parameters, screenResolution);
 		Log.i(TAG, "Camera resolution: " + cameraResolution);
@@ -226,6 +227,12 @@ final class CameraConfigurationManager {
 	}
 
 	Point getScreenResolution() {
+		if (screenResolution == null) {
+			WindowManager manager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+			Display display = manager.getDefaultDisplay();
+			screenResolution = new Point();
+			display.getSize(screenResolution);
+		}
 		return screenResolution;
 	}
 

@@ -55,6 +55,8 @@ public final class ViewfinderView extends View {
 	private final int resultColor;
 	private final int laserColor;
 	private final int resultPointColor;
+	private final int greenColor;
+
 	private int scannerAlpha;
 	private List<ResultPoint> possibleResultPoints;
 	private List<ResultPoint> lastPossibleResultPoints;
@@ -71,6 +73,7 @@ public final class ViewfinderView extends View {
 		resultColor = resources.getColor(R.color.result_view);
 		laserColor = resources.getColor(R.color.viewfinder_laser);
 		resultPointColor = resources.getColor(R.color.possible_result_points);
+		greenColor = resources.getColor(R.color.viewfinder_frame_green);
 		scannerAlpha = 0;
 		possibleResultPoints = new ArrayList<>(5);
 		lastPossibleResultPoints = null;
@@ -101,12 +104,25 @@ public final class ViewfinderView extends View {
 		canvas.drawRect(frame.right + 1, frame.top, width, frame.bottom + 1, paint);
 		canvas.drawRect(0, frame.bottom + 1, width, height, paint);
 
+		// Draw a two pixel solid black border inside the framing rect
+		paint.setColor(greenColor);
+		canvas.drawRect(frame.left-2, frame.top-2, frame.left + 20, frame.top, paint);
+		canvas.drawRect(frame.left-2, frame.top, frame.left, frame.top + 20, paint);
+
+		canvas.drawRect(frame.left-2, frame.bottom-20, frame.left, frame.bottom, paint);
+		canvas.drawRect(frame.left-2, frame.bottom, frame.left+20, frame.bottom+2, paint);
+
+		canvas.drawRect(frame.right-20, frame.top-2, frame.right+2 , frame.top, paint);
+		canvas.drawRect(frame.right, frame.top, frame.right+2, frame.top + 20, paint);
+
+		canvas.drawRect(frame.right-20, frame.bottom, frame.right+2, frame.bottom+2, paint);
+		canvas.drawRect(frame.right, frame.bottom-20, frame.right+2, frame.bottom, paint);
+
 		if (resultBitmap != null) {
 			// Draw the opaque result bitmap over the scanning rectangle
 			paint.setAlpha(CURRENT_POINT_OPACITY);
 			canvas.drawBitmap(resultBitmap, null, frame, paint);
 		} else {
-
 			// Draw a red "laser scanner" line through the middle to show
 			// decoding is active
 			paint.setColor(laserColor);
@@ -147,7 +163,6 @@ public final class ViewfinderView extends View {
 					}
 				}
 			}
-
 			// Request another update at the animation interval, but only
 			// repaint the laser line,
 			// not the entire viewfinder mask.
